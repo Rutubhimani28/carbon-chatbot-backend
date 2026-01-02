@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "type": "module",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "build": "rmdir /s /q node_modules && del package-lock.json && npm install --omit=dev"
+   "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "rm -rf node_modules && rm -f package-lock.json && npm install --omit=dev",
+    "build:win": "rmdir /s /q node_modules && del package-lock.json && npm install --omit=dev",
+    "clean": "rm -rf node_modules package-lock.json",
+    "clean:win": "rmdir /s /q node_modules && del package-lock.json"
   },
   "keywords": [],
   "author": "",
